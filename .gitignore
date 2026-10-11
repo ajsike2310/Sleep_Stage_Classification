@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Raw Sleep-EDF recordings (fetch with data_pipeline/download_data.py)
+data_pipeline/data/raw/*.edf
+data_pipeline/data/raw/*.part
+
+# Processed dataset arrays
+data_pipeline/data/processed/*.npy
+
+# Training outputs (summary metrics and test predictions are kept: the dashboard reads them)
+performance_analysis/outputs/*
+!performance_analysis/outputs/test_metrics.json
+!performance_analysis/outputs/cv_metrics.json
+!performance_analysis/outputs/test_predictions.npz
+model_training/models/training_history.npz
+model_training/models/cv/
+
+# Streamlit cache
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+
+# Web frontend (build with: cd web && npm install && npm run build)
+monitoring_dashboard/web/node_modules/
+monitoring_dashboard/web/dist/
+
+note.txt
